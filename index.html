@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimum-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Movies Website</title>
 </head>
 <body>
+  <!-- Navbar-->
   <header>
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
@@ -33,6 +34,7 @@
       </nav>
     </header>
 
+    <!-- Banner con la pelicula principal-->
     <main>
       <div class="pelicula-principal">
         <div class="contenedor">
@@ -46,11 +48,116 @@
               <i class="fas fa-info-circle"></i> Más información</button>
         </div>
       </div>
+      <!-- <video class="prueba" width="500px" height="500px" src="img/videoPrueba.mp4" poster="img/siliconValley.jpg" preload=""></video> -->
       
+      <!-- Segundo navbar-->
+      <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Categorías</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="navbar-nav ml-auto">
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+      </nav>
+        <br></br>
+      <!-- Carouseles con lista de peliculas-->
+      <div class="peliculas-recomendadas contenedor">
+        <div class="contenedor-titulo-controles">
+          <h3>Películas Recomendadas</h3>
+          <div class="indicadores">
+          </div>
+        </div>
+        <div class="contenedor-principal">
+          <button role="button" id="flecha-izquierda" class="flecha-izquierda">
+            <i class="fas fa-angle-left"></i>
+          </button>
+          <div class="contenedor-carousel">
+            <div class="carousel">
+              <div class="pelicula">
+                <a href="#"><img src="" alt=""/></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="" alt=""/></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="" alt=""/></a>
+              </div>
+            </div>
+          </div>
+          <button role="button" id="flecha-derecha" class="flecha-derecha">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!--Segundo carousel-->
+      <div class="peliculas-recomendadas contenedor">
+        <div class="contenedor-titulo-controles">
+          <h3>Mi lista</h3>
+          <div class="indicadores">
+          </div>
+        </div>
+        <div class="contenedor-principal">
+          <button role="button" id="flecha-izquierda" class="flecha-izquierda">
+            <i class="fas fa-angle-left"></i>
+          </button>
+          <div class="contenedor-carousel">
+            <div class="carousel">
+              <div class="pelicula">
+                <a href="#"><img src="" alt=""/></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="" alt=""/></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="" alt=""/></a>
+              </div>
+            </div>
+          </div>
+          <button role="button" id="flecha-derecha" class="flecha-derecha">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!--Tercer carousel-->
+      <div class="peliculas-recomendadas contenedor">
+        <div class="contenedor-titulo-controles">
+          <h3>Para toda la familia</h3>
+          <div class="indicadores">
+          </div>
+        </div>
+        <div class="contenedor-principal">
+          <button role="button" id="flecha-izquierda" class="flecha-izquierda">
+            <i class="fas fa-angle-left"></i>
+          </button>
+          <div class="contenedor-carousel">
+            <div class="carousel">
+              <div class="pelicula">
+                <a href="#"><img src="" alt=""/></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="" alt=""/></a>
+              </div>
+              <div class="pelicula">
+                <a href="#"><img src="" alt=""/></a>
+              </div>
+            </div>
+          </div>
+          <button role="button" id="flecha-derecha" class="flecha-derecha">
+            <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
     </main>
 
     <script src="bootstrap/js/jquery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="archivo.js"></script>
     <script src="https://kit.fontawesome.com/98089d5a45.js" crossorigin="anonymous"></script>
 </body>
 </html>
