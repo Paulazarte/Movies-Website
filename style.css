@@ -27,12 +27,52 @@ a{
 a:hover{
     color: #007bff;
 }
+
+/*SEGUNDO NAVBAR*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates);
+
+.field {
+  display:flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width:70%;
+  flex-direction:row;
+  box-shadow:
+   1px 1px 0 rgb(22, 160, 133),
+   2px 2px 0 rgb(22, 160, 133),
+   3px 3px 0 rgb(22, 160, 133),
+   4px 4px 0 rgb(22, 160, 133),
+   5px 5px 0 rgb(22, 160, 133),
+   6px 6px 0 rgb(22, 160, 133),
+   7px 7px 0 rgb(22, 160, 133)
+  ;
+}
+
+.field>input[type=text],
+.field>button {
+  display:block;
+  font:1.2em 'Montserrat Alternates';
+}
+
+.field>input[type=text] {
+  flex:1;
+  padding:0.6em;
+  border:0.2em solid rgb(26, 188, 156);
+}
+
+.field>button {
+  padding:0.6em 0.8em;
+  background-color:rgb(26, 188, 156);
+  color:white;
+  border:none;
+}
 /* PELICULA O BANNER PRINCIPAL*/
 .pelicula-principal {
     font-size: 16px;
     min-height: 40.62em;
     color: #fff;
-    background: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5)100%),
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0,0,0,0.5)100%),
     url(img/1siliconValley.jpg);
     background-position: center center;
     background-size: cover;
@@ -159,44 +199,3 @@ a:hover{
     width: 100%;
     vertical-align: top;
   }
-
-  /* Footer */
-
-  .redes-container {
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    height: 30vh;
-  }
-  
-  .redes-container li {
-    display: inline-block;
-    margin: 0 10px;
-    margin-top: 10px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-  }
-  
-h5 b {
-    color: #fff;
-}
-
-  .facebook {
-    color: #3b5999;
-    font-size: 50px;
-  }
-  
-  .twitter {
-    color: #55acee;
-    font-size: 50px;
-  }
-  .linkedin {
-    color: #0077b5;
-    font-size: 50px;
-  }
-  .instagram {
-    color: #e4405f;
-    font-size: 50px;
-  }
-  
