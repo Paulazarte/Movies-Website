@@ -159,3 +159,44 @@ a:hover{
     width: 100%;
     vertical-align: top;
   }
+
+  /* Footer */
+
+  .redes-container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    height: 30vh;
+  }
+  
+  .redes-container li {
+    display: inline-block;
+    margin: 0 10px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
+  
+h5 b {
+    color: #fff;
+}
+
+  .facebook {
+    color: #3b5999;
+    font-size: 50px;
+  }
+  
+  .twitter {
+    color: #55acee;
+    font-size: 50px;
+  }
+  .linkedin {
+    color: #0077b5;
+    font-size: 50px;
+  }
+  .instagram {
+    color: #e4405f;
+    font-size: 50px;
+  }
+  
