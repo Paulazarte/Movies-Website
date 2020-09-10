@@ -9,20 +9,31 @@
 }
 body {
     background: var(--fondo);
-    font-family: "open sans", sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 .contenedor {
     width: 90%;
     margin: auto;
-}
 
+}
+/*NAVBAR*/
+.navbar{
+    background-color: rgba(3,37,65);
+    color: #fff;
+}
+a{
+    color: #fff;
+}
+a:hover{
+    color: #007bff;
+}
 /* PELICULA O BANNER PRINCIPAL*/
 .pelicula-principal {
     font-size: 16px;
     min-height: 40.62em;
     color: #fff;
     background: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5)100%),
-    url(../img/siliconValley.jpg);
+    url(img/1siliconValley.jpg);
     background-position: center center;
     background-size: cover;
     /* margin-bottom: 3.12em; */
@@ -123,3 +134,28 @@ body {
 .peliculas-recomendadas .contenedor-principal .flecha-derecha {
     right: 0;
 }
+
+/*CAROUSEL*/
+.peliculas-recomendadas .contenedor-carousel {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;  
+}
+.peliculas-recomendadas .contenedor-carousel .carousel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+    min-width: 20%;
+    transition: 0.3s ease all;
+    box-shadow: 5px 5 10 rgba(0,0,0,0.3);
+}
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover{
+    transform: scale(1.2);
+    transform-origin: center ;
+}
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+    width: 100%;
+    vertical-align: top;
+  }
