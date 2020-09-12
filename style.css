@@ -17,103 +17,106 @@ body {
 
 }
 /*NAVBAR*/
-.navbar{
-    background-color: rgba(3,37,65);
+nav {
+    color: black;
+    font-size:18px ;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+    color: #007aff;
+    /* font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px; */
+}
+.dropdown-menu{
+    background: #1e2747;
+}
+.dropdown-item{
     color: #fff;
 }
-a{
-    color: #fff;
-}
-a:hover{
+.dropdown-item:hover{
+    background: #2f428a;
     color: #007bff;
 }
-
-/*SEGUNDO NAVBAR*/
-@import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates);
-
-.field {
-  display:flex;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width:70%;
-  flex-direction:row;
-  box-shadow:
-   1px 1px 0 rgb(22, 160, 133),
-   2px 2px 0 rgb(22, 160, 133),
-   3px 3px 0 rgb(22, 160, 133),
-   4px 4px 0 rgb(22, 160, 133),
-   5px 5px 0 rgb(22, 160, 133),
-   6px 6px 0 rgb(22, 160, 133),
-   7px 7px 0 rgb(22, 160, 133)
-  ;
-}
-
-.field>input[type=text],
-.field>button {
-  display:block;
-  font:1.2em 'Montserrat Alternates';
-}
-
-.field>input[type=text] {
-  flex:1;
-  padding:0.6em;
-  border:0.2em solid rgb(26, 188, 156);
-}
-
-.field>button {
-  padding:0.6em 0.8em;
-  background-color:rgb(26, 188, 156);
-  color:white;
-  border:none;
-}
-/* PELICULA O BANNER PRINCIPAL*/
-.pelicula-principal {
-    font-size: 16px;
-    min-height: 40.62em;
+/*BARRA DE BÚSQUEDA*/
+.form-control{
+    width: 100%;
+    padding: 20px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid #007bff;
+    border-radius:50px ;
+    font-size: 18px;
     color: #fff;
-    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0,0,0,0.5)100%),
-    url(img/1siliconValley.jpg);
-    background-position: center center;
-    background-size: cover;
-    /* margin-bottom: 3.12em; */
-    display: flex;
-    align-items: flex-end;
+    outline: none;
 }
-.pelicula-principal .contenedor{
-    margin: 0 auto;
-    margin-bottom: 6.25em;
-    margin-left: 2.5em;
+
+.fa-search{
+    position: relative;
+    top: 50%;
+    right: 50px;
+    color: #007bff;
+    font-size: 25px;
+
 }
-.pelicula-principal .titulo{
-    font-weight: 600;
-    font-size: 3.12em;
-    margin-bottom: 0.4em;
+/*RESPONSIVE NAVBAR*/
+.w-100{
+    height: 100vh;
 }
-.pelicula-principal .descripcion{
-    font-weight: normal;
-    font-size: 1em;
-    line-height: 1.75em;
-    max-width: 50%;
-    margin-bottom: 1.25em;
+@media only screen and (max-width:767px){
+    .navbar-nav.ml-auto{
+        background: rgba(0,0,0,0.5);
+    }
+    .navbar-toggler{
+        padding: 1px 5px;
+        font-size: 18px;
+        line-height: 0.3;
+        background: #fff;
+    }
 }
-.pelicula-principal .boton{
-    background: rgba(44, 44,44,0.5);
-    border: none;
-    border-radius: 0.31em;
-    padding: 0.93em 1.87em;
+
+/* CAROUSEL PRINCIPAL*/
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    background-size:cover ;
+}
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;   
+}
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #8da0bc;
+}
+.carousel-caption a{
+    text-transform: uppercase;
+    background: #262626;
+    padding: 10px 30px;
+    display: inline-block;
     color: #fff;
-    margin-right: 1.25em;
+    margin-top:15px ;
+}
+.Button, button, [type='button'], [type='reset'], [type='submit'] {
+    border: 0;
     cursor: pointer;
-    transition: 0.3s ease all;
-    font-size: 1.12em
-}
-.pelicula-principal .boton:hover{
-    background: #fff;
-    color: #000;
-}
-.pelicula-principal .boton i{
-    margin-right: 1.25em;
+    padding: .2rem 2rem;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    line-height: 2rem;
+    width: auto;
+    border-radius: 3rem;
 }
 
 /*CONTENEDOR  DEL TITULO Y CONTROLES*/
