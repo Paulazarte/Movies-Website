@@ -1,3 +1,7 @@
+/*SCROLL NAVBAR*/
+$(window).scroll(function(){
+    $('nav').toggleClass('scrolled',$(this).scrollTop()>200);
+})
 // var figure = $(".video");
 // var vid = figure.find("video");
 
@@ -22,11 +26,3 @@
 // prueba.on('mouseout blur', function(){
 //     prueba.get(0).pause()
 // })
-
-
-// var element = document.getElementById("div1");
-// element.classList.add("otherclass"); 
-// element.classList.remove("otherclass");
-
-// document.getElementById("my-element").remove();
-// document.getElementById("my-element").add();
