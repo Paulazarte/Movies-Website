@@ -41,7 +41,40 @@ font-size: 1.3em;
 }
 
 .formulario__input {
-
+background-color: rgb(1, 30, 53,0.3);
     padding: 10px ;
     border: 1px solid white;
+    margin-bottom: 40px;
 }
+
+.formulario__input:focus {
+
+    outline: 1.5px solid lightblue;
+}
+
+.formulario__input:focus + .formulario__label {
+
+    margin-top: -130px;
+
+}
+
+
+.formulario__label {
+
+padding-left: 15px;
+position: absolute;
+margin-top: -85px;
+z-index: -20;
+transition: all 0.2s;
+}
+
+.formulario__submit {
+
+    background-color:  rgb(1, 30, 53);
+    padding: 20px;
+    box-shadow: 0 0 3.5px 1px white;
+}
+
+
+
+
