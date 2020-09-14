@@ -1,6 +1,6 @@
 :root{
     --azul: #4D09FC;
-    --fondo: #141414;
+    --fondo: #02124b;
 }
 * {
     margin: 0;
@@ -37,9 +37,9 @@ nav {
     font-weight: bold;
     letter-spacing: 2px; */
 }
-/* .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
-    color: rgb(207, 203, 203);
-} */
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+    color: white;
+}
 .dropdown-menu{
     background: #0c1a4d;
 }
@@ -88,21 +88,28 @@ nav {
     height: 100vh;
     min-height: 300px;
     background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    background-size:cover ;
+    /* -webkit-background-size: cover;
+    background-size:cover ; */
+    /* -webkit-mask-image: radial-gradient(ellipse 200% 70% at 50% 50%, black 0.5%, transparent 66%);
+    mask-image: radial-gradient(ellipse 100% 90% at 70% 50%, black 0.5%, transparent 66%); */
+}
+.d-block{
+    -webkit-mask-image: radial-gradient(ellipse 200% 70% at 50% 50%, black 0.5%, transparent 66%);
+    mask-image: radial-gradient(ellipse 100% 90% at 70% 50%, black 0.5%, transparent 66%);
 }
 .carousel-caption h5{
     font-size: 45px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: 25px;   
+    margin-top: 25px; 
+    /* color: #bdbec0;   */
 }
 .carousel-caption p{
     width: 60%;
     margin: auto;
     font-size: 18px;
     line-height: 1.9;
-    color: #8da0bc;
+    color: #cccfd3;
 }
 .carousel-caption a{
     text-transform: uppercase;
@@ -123,45 +130,65 @@ nav {
     width: auto;
     border-radius: 3rem;
 }
+/* .carousel-item {
+    height: 350px;
+} */
 
-/*CONTENEDOR  DEL TITULO Y CONTROLES*/
-.contenedor-titulo-controles{
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+.carousel-indicators {
+    bottom: -50px;
+    text-align: right;
+    float: right;
+    right: 2% !important;
+    left: inherit;
+}
+ 
+/*Carouseles con lista de peliculas, títulos controles*/
+.contenedor-titulo-controles {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-}
-.contenedor-titulo-controles h3{
+  }
+  
+  .contenedor-titulo-controles h3 {
     color: #fff;
     font-size: 30px;
-}
-.contenedor-titulo-controles button{
+  }
+  
+  .contenedor-titulo-controles button {
     background: #fff;
     height: 3px;
     width: 10px;
     cursor: pointer;
     border: none;
     margin-right: 2px;
-}
-.contenedor-titulo-controles button:hover,
-.contenedor-titulo-controles button:active {
-    background: #4D09FC;
-}
-
-/*CONTENEDOR PRINCIPAL Y FLECHAS*/
-.peliculas-recomendadas {
+  }
+  
+  .contenedor-titulo-controles button:hover,
+  .contenedor-titulo-controles button:active {
+    background: red;
+  }
+  
+  /* CONTENEDOR PRINCIPAL Y FLECHAS*/
+  .peliculas-recomendadas {
     margin-bottom: 70px;
-}
-.peliculas-recomendadas .contenedor-principal {
+  }
+  
+  .peliculas-recomendadas .contenedor-principal {
     display: flex;
     align-items: center;
     position: relative;
-}
-
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
-.peliculas-recomendadas .contenedor-principal .flecha-derecha{
+  }
+  
+  .peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+  .peliculas-recomendadas .contenedor-principal .flecha-derecha {
     position: absolute;
     border: none;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     font-size: 40px;
     height: 50%;
     top: calc(50% - 25%);
@@ -171,39 +198,45 @@ nav {
     cursor: pointer;
     z-index: 500;
     transition: 0.2s ease all;
-}
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
-.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
-    background: rgba(0,0,0,0.9);
-}
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+  }
+  
+  .peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+  .peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .peliculas-recomendadas .contenedor-principal .flecha-izquierda {
     left: 0;
-}
-.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+  }
+  
+  .peliculas-recomendadas .contenedor-principal .flecha-derecha {
     right: 0;
-}
-
-/*CAROUSEL*/
-.peliculas-recomendadas .contenedor-carousel {
-  width: 100%;
-  padding: 20px 0;
-  overflow: hidden;
-  scroll-behavior: smooth;  
-}
-.peliculas-recomendadas .contenedor-carousel .carousel{
+  }
+  
+  /*CAROUSEL*/
+  .peliculas-recomendadas .contenedor-carousel {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+  .peliculas-recomendadas .contenedor-carousel .carousel {
     display: flex;
     flex-wrap: nowrap;
-}
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+  }
+  .peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
     min-width: 20%;
     transition: 0.3s ease all;
-    box-shadow: 5px 5 10 rgba(0,0,0,0.3);
-}
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover{
+    box-shadow: 5px 5 10 rgba(0, 0, 0, 0.3);
+  }
+  
+  .peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
     transform: scale(1.2);
-    transform-origin: center ;
-}
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+    transform-origin: center;
+  }
+  
+  .peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
     width: 100%;
     vertical-align: top;
   }
+  
