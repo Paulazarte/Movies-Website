@@ -76,5 +76,13 @@ transition: all 0.2s;
 }
 
 
+/* js */
 
+.fijar {
 
+    margin-top: -135px;
+}
+
+#menu {
+    background: rgb(1, 30, 53); 
+}
