@@ -159,7 +159,7 @@ nav {
     font-size: 30px;
   }
   
-  .contenedor-titulo-controles button {
+  .contenedor-titulo-controles .indicadores button {
     background: #fff;
     height: 3px;
     width: 10px;
@@ -174,6 +174,9 @@ nav {
   }
   
   /* CONTENEDOR PRINCIPAL Y FLECHAS*/
+  .pelicula{
+    padding-right: 20px;
+  }
   .peliculas-recomendadas {
     margin-bottom: 70px;
   }
@@ -188,6 +191,7 @@ nav {
   .peliculas-recomendadas .contenedor-principal .flecha-derecha {
     position: absolute;
     border: none;
+    border-radius: 0%;
     background: rgba(0, 0, 0, 0.3);
     font-size: 40px;
     height: 50%;
@@ -239,4 +243,30 @@ nav {
     width: 100%;
     vertical-align: top;
   }
+
+  /*Segundo carousel*/
+  /* .carousel-item{
+    height: 0vh;
+  } */
+  
+  .blog .carousel-indicators {
+    left: 0;
+    top: auto;
+      bottom: -40px;
+  
+  }
+  
+  /* The colour of the indicators */
+  .blog .carousel-indicators li {
+      background: #a3a3a3;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+  }
+  
+  .blog .carousel-indicators .active {
+  background: #707070;
+  }
+
+  /*TERCER CAROUSEL*/
   

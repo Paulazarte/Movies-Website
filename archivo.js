@@ -89,3 +89,18 @@ fila.addEventListener("mouseleave", () => {
 // prueba.on('mouseout blur', function(){
 //     prueba.get(0).pause()
 // })
+
+/*SEGUNDO CAROUSEL */
+$('#controlR').click(function() {
+  event.preventDefault();
+  $('#content').animate({
+    marginLeft: "-=400px"
+  }, "fast");
+});
+
+$('#controlL').click(function() {
+  event.preventDefault();
+  $('#content').animate({
+    marginLeft: "+=400px"
+  }, "fast");
+});
