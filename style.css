@@ -73,7 +73,7 @@ nav {
 
 }
 /*RESPONSIVE NAVBAR*/
-@media screen and (max-width:768px){
+/* @media screen and (max-width:768px){
     .navbar{
         position: fixed;
         background: #0c1a4d;
@@ -81,7 +81,7 @@ nav {
         width: 50%;
         flex-direction: column;
     }
-}
+} */
 
 /* PRIMER y SEGUNDO CAROUSEL*/
 .carousel-item{
@@ -95,7 +95,7 @@ nav {
 }
 .gradient{
     -webkit-mask-image: radial-gradient(ellipse 200% 70% at 50% 50%, black 0.5%, transparent 66%);
-    mask-image: radial-gradient(ellipse 100% 90% at 70% 50%, black 0.5%, transparent 66%);
+    /* mask-image: radial-gradient(ellipse 100% 90% at 70% 50%, black 0.5%, transparent 66%); */
 }
 .carousel-caption h5{
     font-size: 45px;
@@ -266,7 +266,26 @@ nav {
   background: #707070;
   }
 
-  /*HOVERS PARA CAROUSELES*/
+  /*GRID*/
+  .grid-contenedor{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  .contenedor-portadas{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    column-gap: 200px;
+    row-gap: 20px;
+    /* grid-gap: 20px 200px; */
+  }
   
-  /*TERCER CAROUSEL*/
-  
+  .titulo-grid{
+    position: absolute;
+ 
+  }
+  .texto-grid{
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
