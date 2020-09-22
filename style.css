@@ -328,8 +328,9 @@ button,
 
 .limit-age {
   font-family: "Nunito", sans-serif;
-  background: rgba(255, 4, 4, 0.623);
-  width: 35px;
+  background:#0c1a4d;
+  width: 45px;
+margin-top: 59px;
 }
 
 h2 {
@@ -343,5 +344,5 @@ h2 {
 }
 
 .boton-reproducir {
-  margin-left: 37.7%;
+
 }
