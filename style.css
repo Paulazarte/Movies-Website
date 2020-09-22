@@ -289,3 +289,41 @@ nav {
     text-align: center;
     transform: translate(-50%, -50%);
   }
+
+
+  /* hover */
+
+
+
+  .portadas {
+    position: relative;
+    margin: 1%;
+   
+    height: 368px;
+    width: 250px;
+  }
+
+
+  .capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    display: flex;
+    transform: scale(0);
+    transition: 0.3s ease;
+  }
+  
+  
+
+  .portadas:hover .capa {
+
+    transform: scale(1);
+  }
+  
