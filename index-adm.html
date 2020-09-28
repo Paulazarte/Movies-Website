@@ -78,15 +78,58 @@
     </nav>
       </header>
     </div>
-<!--  Boton Nueva Peli-->
+
+<!--BOTÓN DE LA VENTANA MODAL-->
 
 <div id="NuevaPeli">
 
   <div id="boton-nuevapeli">
-    <button href="index.html"  type="button" class="btn btn-primary btn-lg" id="boton-nuevapeli">Nueva Película</button>
+
+    <!-- Open The Modal -->
+    <button id="myBtn">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        
+        <form action="" class="formulario">
+          <h2 class="formulario__titulo">Nueva Película</h2>
+    
+          <input type="text" class="formulario__input" />
+          <label for="" class="formulario__label">Código</label>
+    
+          <input type="text" class="formulario__input" />
+          <label for="" class="formulario__label">Nombre</label>
+    
+          <input type="text" class="formulario__input" />
+          <label for="" class="formulario__label">Descripción</label>
+    
+          <select class="formulario__input" id="menu">
+            <option selected value="">Categorías</option>
+            <option value="1">Acción</option>
+            <option value="2">Aventura</option>
+            <option value="3">Comedia</option>
+            <option value="4">Familiar</option>
+            <option value="5">Terror</option>
+            <option value="6">Romance</option>
+            <option value="7">Drama</option>
+            <option value="8">Musical</option>
+            <option value="9">Fantasía</option>
+          </select>
+    
+          <input type="submit" class="formulario__submit" />
+        </form>
+
+      </div>
+    </div>
+    <!-- <button href="index.html"  type="button" class="btn btn-primary btn-lg" id="boton-nuevapeli">Nueva Película</button> -->
   </div> 
 
 </div>
+
 
     <!--Tabla de peliculas-->
     
@@ -150,8 +193,8 @@
       <td>&nbsp;<i class="far fa-trash-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-edit"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i></td>
     </tr>
   </table>
-
-  <div class="overlay active" id="overlay">
+<!--VENTANA MODAL-->
+  <!-- <div class="overlay active" id="overlay">
     <div class="popup" id="popup">
       <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="far fa-window-close"></i></a>
       <h2 class="titulo-popup">AGREGAR PELICULAS Y SERIES</h2>
@@ -173,7 +216,9 @@
         <input type="submit" class="btn-submit" value="Enviar">
       </form>
     </div>
-  </div>
+  </div> -->
+
+
 
 </div>
 

@@ -152,88 +152,111 @@ background-color:rgba(74, 110, 145, 0.4);
 .instagram {
   font-size: 30px;
 }
+
 /*FORMULARIO EMERGENTE */
-input, select, option{
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #1b6ca8;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #5295c5;
+  width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: rgb(24, 23, 23);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*FORMULARIO*/
+.formulario {
+  margin-top: 100px;
+  margin-bottom: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  max-width: 100%;
+  padding: 20px;
+  box-shadow: 0 0 20px 1px black;
+  position: relative;
+}
+
+.formulario__titulo {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  color: black;
+}
+
+/* Boton Enviar */
+
+.formulario__input,
+.formulario__label,
+.formulario__submit {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 1.3em;
+}
+
+.formulario__input {
+  background-color: rgb(1, 30, 53, 0.3);
+  padding: 10px;
+  border: 1px solid black;
+  margin-bottom: 40px;
+}
+
+.formulario__input:focus {
+  outline: 1.5px solid rgb(13, 98, 224);
+}
+
+.formulario__input:focus + .formulario__label {
+  margin-top: -130px;
+}
+
+.formulario__label {
+  padding-left: 15px;
+  position: absolute;
+  margin-top: -85px;
+  z-index: -20;
+  transition: all 0.2s;
+}
+
+.formulario__submit {
+  background-color: rgb(1, 30, 53);
+  padding: 20px;
+  box-shadow: 0 0 3.5px 1px black;
+}
+
+#formulario__label{
   color: #000000;
 }
-/* Tabla de Peliculas */
 
-#Contenedor__pelis {
-  margin-left: 8%;
-  margin-right: 8%;
-margin-bottom: 60px;
-}
-
-.overlay {
-  background: rgba(0, 0, 0,.3);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  visibility: hidden;
-}
-/* .overlay .active {
-  visibility: visible;
-} */
-
-.popup{
-  background: white;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0,.3);
-  border-radius: 6px;
-  padding: 20px;
-  text-align: center;
-  width: 600px;
-}
-.popup .btn-cerrar-popup .fa-window-close{
-  font-size: 16px;
-  line-height: 16px;
-  display: block;
-  text-align: right;
-  color: #bbbbbb;
-  transition: .3s ease all;
-
-}
-.popup .btn-cerrar-popup .fa-window-close:hover{
-  color: #000;
-}
-.titulo-popup{ /*Titulos H2*/
-  font-size: 36px;
-  color: #000;
-  font-weight: 600;
-  margin-bottom: 10px;
-  /* opacity: 0; */
-  margin-top: 0%;
-}
-label{
-  color: #000;
-}
-/* .popup form .contenedor-inputs{} */
-
-.popup form .contenedor-inputs input select{
-  width: 100%;
-  margin-bottom: 20px;
-  height: 52px;
-  line-height: 52px;
-  font-size: 18px;
-  text-align: center;
-  border: 1px solid #bbbbbb;
-}
-.popup form .btn-submit { /*Boton estilos*/
-  padding: 0 20px;
-  height: 40px;
-  line-height: 40px;
-  border: none;
-  color: #fff;
-  background: #5e7de3;
-  border-radius: 3px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: .3s ease all;
-}
-.popup form .btn-submit:hover {
-  background: rgba(94, 125, 227, .8);
+option{
+  background: #1b6ca8;
 }
