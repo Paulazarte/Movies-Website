@@ -86,7 +86,7 @@
   <div id="boton-nuevapeli">
 
     <!-- Open The Modal -->
-    <button id="myBtn">Open Modal</button>
+    <button id="myBtn" type="submit">Open Modal</button>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -95,17 +95,17 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         
-        <form action="" class="formulario">
+        <form action="" id ="formulario" class="formulario" name="formulario">
           <h2 class="formulario__titulo">Nueva Película</h2>
     
           <input type="text" class="formulario__input" />
-          <label for="" class="formulario__label">Código</label>
+          <label for="" class="formulario__label" name= "codigo" id="codigo">Código</label>
     
           <input type="text" class="formulario__input" />
-          <label for="" class="formulario__label">Nombre</label>
+          <label for="" class="formulario__label" name="nombre" id="nombre">Nombre</label>
     
           <input type="text" class="formulario__input" />
-          <label for="" class="formulario__label">Descripción</label>
+          <label for="" class="formulario__label" name="descripcion" id="descripcion">Descripción</label>
     
           <select class="formulario__input" id="menu">
             <option selected value="">Categorías</option>
@@ -150,7 +150,7 @@
 
     <tr>
         <td>1</td> 
-        <td></td> 
+        <td><input</td> 
         <td></td> 
         <td></td> 
         <td><input type="checkbox"></td> 
@@ -193,32 +193,6 @@
       <td>&nbsp;<i class="far fa-trash-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-edit"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i></td>
     </tr>
   </table>
-<!--VENTANA MODAL-->
-  <!-- <div class="overlay active" id="overlay">
-    <div class="popup" id="popup">
-      <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="far fa-window-close"></i></a>
-      <h2 class="titulo-popup">AGREGAR PELICULAS Y SERIES</h2>
-      <form class="formulario" action="">
-        <div class="contenedor-inputs">
-          <label for="codigo">Código:</label>
-          <input id="codigo" type="text" placeholder="Código" name="codigo"><br>
-          <label for="nombre">Nombre</label>
-          <input id="nombre" type="text" placeholder="Nombre" name="nombre"><br>
-          <label for="descripcion">Descripción</label>
-          <input id="descripcion" type="text" placeholder="Descripción" name="descripcion"><br>
-          <label for="categorias">Categorías</label>
-          <select name="categorias" id="categorias">
-            <option value="accio">Acción</option>
-            <option value="aventura">Aventura</option>
-            <option value="comedia">Comedia</option>
-          </select>
-        </div>
-        <input type="submit" class="btn-submit" value="Enviar">
-      </form>
-    </div>
-  </div> -->
-
-
 
 </div>
 

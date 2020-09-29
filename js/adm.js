@@ -39,3 +39,56 @@ if(this.value.length>=1) {
 })
 
 }
+
+//AGREFAR DATOS A LA TABLA
+class Datos{
+  constructor(codigo, nombre){
+    this._codigo = codigo;
+    this._nombre = nombre;
+  }
+}
+
+class Visu {
+  agregarInfo(Datos){
+    const tabla = document.getElementById('Contenedor__pelis');
+    const elementos = document.createElement("table");
+    elementos.innerHTML = `
+    <table>
+
+    <tr>
+        <td>1</td> 
+        <td><input</td> 
+        <td></td> 
+        <td></td> 
+        <td><input type="checkbox"></td> 
+        <td>&nbsp;<i class="far fa-trash-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-edit"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i></td>
+    </tr>
+
+    <tr>
+        <td><input type="text" name="codigoobtenido" id="codigoobtenido"></td> 
+        <td><input type="text" name="nombreobtenido" id="nombreobtenido"></td> 
+        <td></td> 
+        <td></td> 
+        <td><input type="checkbox"></td> 
+        <td>&nbsp;<i class="far fa-trash-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-edit"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i></td>
+    </tr>
+    </table>
+    `;
+    tabla.appendChild(elementos);
+  }
+}
+const evento = document
+  .getElementById('formulario')
+  .addEventListener('submit', function(e){
+    const codigo = getElementById('codigo').value;
+    const nombre = getElementById('nombre').value;
+
+    const ponerElementos = new Datos (codigp, nombre);
+    const visu = new Visu();
+    visu.agregarInfo(ponerElementos);
+
+    e.preventDefault();
+  })
+
+
+

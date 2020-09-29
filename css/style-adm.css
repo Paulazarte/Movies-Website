@@ -260,3 +260,13 @@ background-color:rgba(74, 110, 145, 0.4);
 option{
   background: #1b6ca8;
 }
+
+/* js */
+
+.fijar {
+  margin-top: -135px;
+}
+
+#menu {
+  background: rgb(1, 30, 53);
+}
