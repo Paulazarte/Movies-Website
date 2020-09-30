@@ -1,3 +1,7 @@
+/*SCROLL NAVBAR*/
+$(window).scroll(function(){
+  $('nav').toggleClass('scrolled',$(this).scrollTop()>200);
+})
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -49,30 +53,17 @@ class Datos{
 }
 
 class Visu {
-  agregarInfo(Datos){
-    const tabla = document.getElementById('Contenedor__pelis');
-    const elementos = document.createElement("table");
+  agregarInfo(datos){
+    const tabla = document.getElementById('Contenedor__peliculas');
+    const elementos = document.createElement("tr");
     elementos.innerHTML = `
-    <table>
 
-    <tr>
-        <td>1</td> 
-        <td><input</td> 
+        <td>${datos._codigo}</td> 
+        <td>${datos._nombre}</td> 
         <td></td> 
         <td></td> 
         <td><input type="checkbox"></td> 
         <td>&nbsp;<i class="far fa-trash-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-edit"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i></td>
-    </tr>
-
-    <tr>
-        <td><input type="text" name="codigoobtenido" id="codigoobtenido"></td> 
-        <td><input type="text" name="nombreobtenido" id="nombreobtenido"></td> 
-        <td></td> 
-        <td></td> 
-        <td><input type="checkbox"></td> 
-        <td>&nbsp;<i class="far fa-trash-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-edit"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i></td>
-    </tr>
-    </table>
     `;
     tabla.appendChild(elementos);
   }
@@ -80,10 +71,10 @@ class Visu {
 const evento = document
   .getElementById('formulario')
   .addEventListener('submit', function(e){
-    const codigo = getElementById('codigo').value;
-    const nombre = getElementById('nombre').value;
+    const codigo = document.getElementById('codigo').value;
+    const nombre = document.getElementById('nombre').value;
 
-    const ponerElementos = new Datos (codigp, nombre);
+    const ponerElementos = new Datos (codigo, nombre);
     const visu = new Visu();
     visu.agregarInfo(ponerElementos);
 
