@@ -183,13 +183,24 @@ const EliminarDB = (pelis) => {
   GuardarDB();
 }
 
-const ActivarDB = (pelis) => {
-  let indexArray = arrayPelis.findIndex((elemento) => {
-    return elemento.pelis === pelis
-  });
-  console.log(arrayPelis[indexArray]);
-  arrayPelis[indexArray].estado = true;
-  GuardarDB();
+const ActivarDB = (codigoo) => {
+  // let indexArray = arrayPelis.findIndex((elemento) => {
+  //   return elemento.pelis === pelis
+  // });
+  // console.log(arrayPelis[indexArray]);
+  // arrayPelis[indexArray].estado = true;
+  // GuardarDB();
+
+  let pelisArray = JSON.parse(localStorage.getItem('peliculas'));
+  pelisArray.forEach((elemento) =>{
+    if (elemento.codigo == codigoo && elemento.estado == false) {
+      elemento.estado = true;
+      console.log('coincide: ' + elemento.estado);
+      localStorage.setItem('peliculas',JSON.stringify(pelisArray))
+      window.location.reload();
+    }
+  })
+
 }
 
 
@@ -222,12 +233,14 @@ listaPeliculasUI.addEventListener('click',(e) => {
     }
     if(e.target.innerHTML === 'done_all'){
       //Acción de activar y desactivar
-      ActivarDB(texto)
+      let codigoo = e.target.parentNode.parentNode.childNodes[1].firstChild.data;
+      console.log(e.target.parentNode.parentNode.childNodes[1].firstChild.data)
+      ActivarDB(codigoo)
     }
-    if(e.target.innerHTML === 'edit'){
-      //Acción de abrir formulario
-      EditarDB(texto)
-    }
+    // if(e.target.innerHTML === 'edit'){
+    //   //Acción de abrir formulario
+    //   EditarDB(texto)
+    // }
   }
 });
 
