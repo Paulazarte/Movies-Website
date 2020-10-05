@@ -45,41 +45,167 @@ if(this.value.length>=1) {
 }
 
 //AGREFAR DATOS A LA TABLA
-class Datos{
-  constructor(codigo, nombre){
-    this._codigo = codigo;
-    this._nombre = nombre;
+// class Datos{
+//   constructor(codigo, nombre,descripcion){
+//     this._codigo = codigo;
+//     this._nombre = nombre;
+//     this._descripcion = descripcion;
+//   }
+// }
+
+// class Visu {
+//   agregarInfo(datos){
+//     const tabla = document.getElementById('tabla');
+//     const elementos = document.createElement("tr");
+//     elementos.innerHTML = `
+
+//         <td>${datos._codigo}</td> 
+//         <td>${datos._nombre}</td> 
+//         <td>${datos._descripcion}</td> 
+//         <td></td> 
+//         <td><input type="checkbox"></td> 
+//         <td>&nbsp;<i class="far fa-trash-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-edit"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i></td>
+//     `;
+//     tabla.appendChild(elementos);
+//   }
+// }
+// const evento = document
+//   .getElementById('formulario')
+//   .addEventListener('submit', function(e){
+//     const codigo = document.getElementById('codigo').value;
+//     const nombre = document.getElementById('nombre').value;
+//     const descripcion = document.getElementById('descripcion').value;
+
+//     const ponerElementos = new Datos (codigo, nombre,descripcion);
+//     const visu = new Visu();
+//     visu.agregarInfo(ponerElementos);
+
+//     e.preventDefault();
+//   })
+
+
+/*VARIABLES GLOBALES */
+const formularioUI = document.querySelector('#formulario');
+const listaPeliculasUI = document.getElementById('listaPeliculas');
+let arrayPelis = [];
+
+
+
+/*FUNCIONES */
+const CrearPelis = (codigo, titulo, descripcion, categoria) => {
+  let pelis = {
+    codigo: codigo,
+    titulo: titulo,
+    descripcion: descripcion,
+    categoria: categoria,
+    estado: true
+  }
+
+arrayPelis.push(pelis);
+
+return pelis;
+
+}
+
+const GuardarDB = () => {
+  localStorage.setItem('peliculas', JSON.stringify(arrayPelis));
+
+  PintarDB();
+
+}
+
+const PintarDB = () => {
+  //Esto limpia el HTML ¡!
+  listaPeliculasUI.innerHTML = '';
+  arrayPelis = JSON.parse(localStorage.getItem('peliculas'));
+  if(arrayPelis === null){
+    arrayPelis = [];
+  }else{
+    arrayPelis.forEach(element => {
+      listaPeliculasUI.innerHTML += `
+  <div id= "listaPeliculas" class="Contenedor__pelis"> 
+  <table id= "tabla">
+        <td>${element.codigo}</td> 
+        <td>${element.titulo}</td> 
+        <td>${element.descripcion}</td> 
+        <td>${element.categoria}</td> 
+        <td>
+          <span class="material-icons float-left mr-2"></span>
+          Estado - <b>${element.estado}</b>
+        </td>  
+        <td>
+          <span class="material-icons mr-3">delete</span> 
+          <span class="material-icons mr-3" id='myBtn'>edit</span>
+          <span class="material-icons mr-3">done_all</span>
+        </td>
+        </table>
+        </div>`
+    });
   }
 }
 
-class Visu {
-  agregarInfo(datos){
-    const tabla = document.getElementById('Contenedor__peliculas');
-    const elementos = document.createElement("tr");
-    elementos.innerHTML = `
-
-        <td>${datos._codigo}</td> 
-        <td>${datos._nombre}</td> 
-        <td></td> 
-        <td></td> 
-        <td><input type="checkbox"></td> 
-        <td>&nbsp;<i class="far fa-trash-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="far fa-edit"></i>&nbsp;&nbsp;&nbsp;<i class="fas fa-star"></i></td>
-    `;
-    tabla.appendChild(elementos);
-  }
+const EliminarDB = (pelis) => {
+  let indexArray;
+  arrayPelis.forEach((elemento,index) => {
+    if(elemento.pelis === pelis){
+      indexArray =index;
+    } 
+    
+  });
+  arrayPelis.splice(indexArray,1);
+  GuardarDB();
 }
-const evento = document
-  .getElementById('formulario')
-  .addEventListener('submit', function(e){
-    const codigo = document.getElementById('codigo').value;
-    const nombre = document.getElementById('nombre').value;
 
-    const ponerElementos = new Datos (codigo, nombre);
-    const visu = new Visu();
-    visu.agregarInfo(ponerElementos);
+const ActivarDB = (pelis) => {
+  let indexArray = arrayPelis.findIndex((elemento) => {
+    return elemento.pelis === pelis
+  });
+  console.log(arrayPelis[indexArray]);
+  arrayPelis[indexArray].estado = true;
+  GuardarDB();
+}
 
-    e.preventDefault();
-  })
+
+//EVENTLISTENER
+formularioUI.addEventListener('submit',(e) =>{
+
+  e.preventDefault();
+  let codigoForm = document.querySelector('#codigo').value;
+  let tituloForm = document.querySelector('#titulo').value;
+  let descripcionForm = document.querySelector('#descripcion').value;
+  let categoriaForm = document.querySelector('#categoria').value;
+  
+  CrearPelis(codigoForm, tituloForm, descripcionForm, categoriaForm);
+  GuardarDB();
+  formularioUI.reset();
+
+});
+
+document.addEventListener('DOMContentLoaded', PintarDB);
+
+listaPeliculasUI.addEventListener('click',(e) => {
+
+  e.preventDefault();
+  
+  if(e.target.innerHTML === 'done_all' || e.target.innerHTML === 'delete' || e.target.innerHTML === 'edit'){
+    let texto = e.target.parentNode.parentNode.childNodes[2].innerText;
+    if(e.target.innerHTML === 'delete'){
+      //Acción de eliminar
+      EliminarDB(texto);
+    }
+    if(e.target.innerHTML === 'done_all'){
+      //Acción de activar y desactivar
+      ActivarDB(texto)
+    }
+    if(e.target.innerHTML === 'edit'){
+      //Acción de abrir formulario
+      EditarDB(texto)
+    }
+  }
+});
+
+
+
 
 
 

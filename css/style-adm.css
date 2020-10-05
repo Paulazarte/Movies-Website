@@ -85,7 +85,7 @@ nav {
 
 /* Tabla de Peliculas */
 
-#Contenedor__pelis {
+.Contenedor__pelis {
   margin-left: 8%;
   margin-right: 8%;
 }
