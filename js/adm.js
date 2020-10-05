@@ -126,8 +126,8 @@ const PintarDB = () => {
       if(element.estado === true){
         listaPeliculasUI.innerHTML += `
   <div id= "listaPeliculas" class="Contenedor__pelis"> 
-  <table id= "tabla" >
-  <tr style= "background-color:rgba(38, 226, 85, 0.4);">
+  <table id= "tabla" style= "background-color:rgba(38, 226, 85, 0.4);" >
+  <tr >
         <td>${element.codigo}</td> 
         <td>${element.titulo}</td> 
         <td>${element.descripcion}</td> 
