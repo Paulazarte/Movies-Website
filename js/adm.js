@@ -196,7 +196,7 @@ const ActivarDB = (pelis) => {
 //EVENTLISTENER
 formularioUI.addEventListener('submit',(e) =>{
 
-  e.preventDefault();
+  // e.preventDefault();
   let codigoForm = document.querySelector('#codigo').value;
   let tituloForm = document.querySelector('#titulo').value;
   let descripcionForm = document.querySelector('#descripcion').value;
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', PintarDB);
 
 listaPeliculasUI.addEventListener('click',(e) => {
 
-  e.preventDefault();
+  // e.preventDefault();
   
   if(e.target.innerHTML === 'done_all' || e.target.innerHTML === 'delete' ){
     let texto = e.target.parentNode.parentNode.childNodes[2].innerText;
@@ -224,10 +224,10 @@ listaPeliculasUI.addEventListener('click',(e) => {
       //Acción de activar y desactivar
       ActivarDB(texto)
     }
-    // if(e.target.innerHTML === 'edit'){
-    //   //Acción de abrir formulario
-    //   EditarDB(texto)
-    // }
+    if(e.target.innerHTML === 'edit'){
+      //Acción de abrir formulario
+      EditarDB(texto)
+    }
   }
 });
 
