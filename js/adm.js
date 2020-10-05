@@ -98,7 +98,7 @@ const CrearPelis = (codigo, titulo, descripcion, categoria) => {
     titulo: titulo,
     descripcion: descripcion,
     categoria: categoria,
-    estado: true
+    estado: false
   }
 
 arrayPelis.push(pelis);
@@ -122,9 +122,12 @@ const PintarDB = () => {
     arrayPelis = [];
   }else{
     arrayPelis.forEach(element => {
-      listaPeliculasUI.innerHTML += `
+
+      if(element.estado === true){
+        listaPeliculasUI.innerHTML += `
   <div id= "listaPeliculas" class="Contenedor__pelis"> 
-  <table id= "tabla">
+  <table id= "tabla" >
+  <tr style= "background-color:rgba(38, 226, 85, 0.4);">
         <td>${element.codigo}</td> 
         <td>${element.titulo}</td> 
         <td>${element.descripcion}</td> 
@@ -135,11 +138,35 @@ const PintarDB = () => {
         </td>  
         <td>
           <span class="material-icons mr-3">delete</span> 
-          <span class="material-icons mr-3" id='myBtn'>edit</span>
+          <span class="material-icons mr-3">edit</span>
           <span class="material-icons mr-3">done_all</span>
         </td>
-        </table>
-        </div>`
+    </tr>
+    </table>
+    </div>`
+      }else{
+        listaPeliculasUI.innerHTML += `
+  <div id= "listaPeliculas" class="Contenedor__pelis"> 
+  <table id= "tabla">
+  <tr>
+        <td>${element.codigo}</td> 
+        <td>${element.titulo}</td> 
+        <td>${element.descripcion}</td> 
+        <td>${element.categoria}</td> 
+        <td>
+          <span class="material-icons float-left mr-2"></span>
+          Estado - <b>${element.estado}</b>
+        </td>  
+        <td>
+          <span class="material-icons mr-3">delete</span> 
+          <span class="material-icons mr-3">edit</span>
+          <span class="material-icons mr-3">done_all</span>
+        </td>
+  </tr>
+  </table>
+  </div>`
+      }
+
     });
   }
 }
@@ -187,7 +214,7 @@ listaPeliculasUI.addEventListener('click',(e) => {
 
   e.preventDefault();
   
-  if(e.target.innerHTML === 'done_all' || e.target.innerHTML === 'delete' || e.target.innerHTML === 'edit'){
+  if(e.target.innerHTML === 'done_all' || e.target.innerHTML === 'delete' ){
     let texto = e.target.parentNode.parentNode.childNodes[2].innerText;
     if(e.target.innerHTML === 'delete'){
       //Acción de eliminar
@@ -197,10 +224,10 @@ listaPeliculasUI.addEventListener('click',(e) => {
       //Acción de activar y desactivar
       ActivarDB(texto)
     }
-    if(e.target.innerHTML === 'edit'){
-      //Acción de abrir formulario
-      EditarDB(texto)
-    }
+    // if(e.target.innerHTML === 'edit'){
+    //   //Acción de abrir formulario
+    //   EditarDB(texto)
+    // }
   }
 });
 
