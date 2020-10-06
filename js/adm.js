@@ -90,7 +90,7 @@ if(this.value.length>=1) {
 
 /*VARIABLES GLOBALES */
 const formularioUI = document.querySelector('#formulario');
-const listaPeliculasUI = document.getElementById('listaPeliculas');
+const listaPeliculasUI = document.getElementById('tabla');
 let arrayPelis = [];
 
 
@@ -129,29 +129,23 @@ const PintarDB = () => {
 
       if(element.estado === true){
         listaPeliculasUI.innerHTML += `
-  <div id= "listaPeliculas" class="Contenedor__pelis"> 
-  <table id= "tabla" style= "background-color:rgba(38, 226, 85, 0.4);" >
-  <tr >
-        <td>${element.codigo}</td> 
-        <td>${element.titulo}</td> 
-        <td>${element.descripcion}</td> 
-        <td>${element.categoria}</td> 
-        <td>
+  <tr>
+        <td style= "background-color:rgba(38, 226, 85, 0.4);">${element.codigo}</td> 
+        <td style= "background-color:rgba(38, 226, 85, 0.4);">${element.titulo}</td> 
+        <td style= "background-color:rgba(38, 226, 85, 0.4);">${element.descripcion}</td> 
+        <td style= "background-color:rgba(38, 226, 85, 0.4);">${element.categoria}</td> 
+        <td style= "background-color:rgba(38, 226, 85, 0.4);">
           <span class="material-icons float-left mr-2"></span>
           Estado - <b>${element.estado}</b>
         </td>  
-        <td>
+        <td style= "background-color:rgba(38, 226, 85, 0.4);">
           <span class="material-icons mr-3">delete</span> 
           <span class="material-icons mr-3">edit</span>
           <span class="material-icons mr-3">done_all</span>
         </td>
-    </tr>
-    </table>
-    </div>`
+    </tr>`
       }else{
         listaPeliculasUI.innerHTML += `
-  <div id= "listaPeliculas" class="Contenedor__pelis"> 
-  <table id= "tabla">
   <tr>
         <td>${element.codigo}</td> 
         <td>${element.titulo}</td> 
@@ -166,9 +160,7 @@ const PintarDB = () => {
           <span class="material-icons mr-3">edit</span>
           <span class="material-icons mr-3">done_all</span>
         </td>
-  </tr>
-  </table>
-  </div>`
+  </tr>`
       }
 
     });
