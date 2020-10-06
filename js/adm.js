@@ -1,3 +1,5 @@
+//Set 2 o tres peliculas
+
 /*SCROLL NAVBAR*/
 $(window).scroll(function(){
   $('nav').toggleClass('scrolled',$(this).scrollTop()>200);
@@ -120,7 +122,7 @@ const GuardarDB = () => {
 
 const PintarDB = () => {
   //Esto limpia el HTML ¡!
-  listaPeliculasUI.innerHTML = '';
+  // listaPeliculasUI.innerHTML = '';
   arrayPelis = JSON.parse(localStorage.getItem('peliculas'));
   if(arrayPelis === null){
     arrayPelis = [];
@@ -167,16 +169,17 @@ const PintarDB = () => {
   }
 }
 
-const EliminarDB = (pelis) => {
+const EliminarDB = (texto) => {
   let indexArray;
   arrayPelis.forEach((elemento,index) => {
-    if(elemento.pelis === pelis){
+    if(elemento.codigo === texto){
       indexArray =index;
+      console.log(elemento.codigo)
+      arrayPelis.splice(indexArray,1);
     } 
-    
   });
-  arrayPelis.splice(indexArray,1);
   GuardarDB();
+  window.location.reload();
 }
 
 const ActivarDB = (texto) => {
@@ -199,19 +202,58 @@ const ActivarDB = (texto) => {
 
 }
 
+let editando = false;
+
+const EditarDB = (texto) => {
+  let pelisArray = JSON.parse(localStorage.getItem('peliculas'));
+  pelisArray.forEach((elemento) =>{
+    if (elemento.codigo == texto) {
+      document.getElementById('codigo').value = elemento.codigo;
+      document.getElementById('titulo').value = elemento.titulo;
+      document.getElementById('descripcion').value = elemento.descripcion;
+      document.getElementById('categoria').value = elemento.categoria;
+      editando = true;
+      console.log(elemento);
+    }
+  })
+  modal.style.display = "block";
+}
+
 
 //EVENTLISTENER
 formularioUI.addEventListener('submit',(e) =>{
-
+  let enUso = false;
   // e.preventDefault();
   let codigoForm = document.querySelector('#codigo').value;
   let tituloForm = document.querySelector('#titulo').value;
   let descripcionForm = document.querySelector('#descripcion').value;
   let categoriaForm = document.querySelector('#categoria').value;
+
+  let pelis = JSON.parse(localStorage.getItem('peliculas'));
+  if(pelis === null){
+    pelis = [];
+  }
+  pelis.forEach((elemento) => {
+    if (elemento.codigo == codigoForm && editando == false){
+        enUso = true;
+    }
+  });
   
-  CrearPelis(codigoForm, tituloForm, descripcionForm, categoriaForm);
-  GuardarDB();
-  formularioUI.reset();
+  if(enUso){
+    alert('Este codigo ya está en uso')
+  }else if(editando){
+    pelis.forEach((elemento, index) => {
+      if(elemento.codigo === codigoForm){
+        pelis.splice(index,1);
+        localStorage.setItem('peliculas',JSON.stringify(pelis));
+      }
+    })
+
+  }else{
+    CrearPelis(codigoForm, tituloForm, descripcionForm, categoriaForm);
+    GuardarDB();
+    formularioUI.reset();
+  }
 
 });
 
@@ -222,9 +264,11 @@ listaPeliculasUI.addEventListener('click',(e) => {
   // e.preventDefault();
   
   if(e.target.innerHTML === 'done_all' || e.target.innerHTML === 'delete' || e.target.innerHTML === 'edit' ){
-    let texto = e.target.parentNode.parentNode.childNodes[2].innerText;
+    // let texto = e.target.parentNode.parentNode.childNodes[2].innerText;
+    let texto = e.target.parentNode.parentNode.childNodes[1].innerText;
     if(e.target.innerHTML === 'delete'){
       //Acción de eliminar
+      console.log(e.target.innerHTML);
       EliminarDB(texto);
     }
     if(e.target.innerHTML === 'done_all'){
@@ -235,7 +279,8 @@ listaPeliculasUI.addEventListener('click',(e) => {
     }
     if(e.target.innerHTML === 'edit'){
       //Acción de abrir formulario
-      let texto = e.target.parentNode.parentNode.childNodes[2].innerText;
+      let texto = e.target.parentNode.parentNode.childNodes[1].innerText;
+      console.log(texto);
       EditarDB(texto)
     }
   }
