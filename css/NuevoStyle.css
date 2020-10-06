@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1em;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.navbar {
+  background: rgb(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.top-nav-collapse {
+  background: black !important;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: white;
+}
+.nav-link:hover {
+  color: turquoise;
+  transition: all 0.5s;
+}
+#navbarDropdownMenuLink {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: white;
+}
+#navbarDropdownMenuLink:hover {
+  color: turquoise;
+  transition: all 0.5s;
+}
+
+#menu {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* boton menu */
+.navbar-toggler {
+  border-color: white;
+}
+.navbar-toggler:hover {
+  border-color: turquoise;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* botones inicio sesion media query */
+@media only screen and (max-width: 767px) {
+  #iniciar-sesion .nav-link {
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #iniciar-sesion .nav-link {
+    display: inline;
+  }
+}
+
+/* Banner */
+@media only screen and (min-width: 320px) {
+  #banner {
+    padding-top: 30%;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  #banner {
+    padding-top: 18%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #banner {
+    padding-top: 15%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #banner {
+    padding-top: 10%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  #banner {
+    padding-top: 8%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  #banner {
+    padding-top: 7%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  #banner {
+    padding-top: 5.5%;
+  }
+}
+
+/* Separador */
+
+.separador {
+ 
+  height: 400%;
+font-size: 2em;
+color: whitesmoke;
+margin-top: 1.5%;
+margin-left: 0.5%;
+}
+
+
+
+/* Slider 1 */
+
+#slider1 {
+  display: flex;
+}
+#slider1 .items {
+  width: 100%;
+  
+}
+#slider1 .items img {
+  width: 100%;
+ 
+}
+.container-slider {
+  position: relative;
+}
+.container-slider .slider-anterior {
+  position: absolute;
+  color: white;
+  top: 40%;
+}
+.container-slider .slider-anterior span {
+  font-size: 1.5em;
+  display: block;
+}
+.container-slider .slider-siguiente {
+  position: absolute;
+  color: white;
+  top: 40%;
+  right: 0%;
+}
+.container-slider .slider-siguiente span {
+  font-size: 1.5em;
+  display: block;
+}
+
+/* Slider 2 */
+#slider2 {
+  display: flex;
+}
+#slider2 .items {
+  width: 300px;
+  height: 150px;
+}
+#slider2 .items img {
+  width: 350px;
+  height: 250px;
+}
+.container-slider2 {
+  position: relative;
+}
+.container-slider2 .slider-anterior2 {
+  position: absolute;
+  color:white;
+  top: 40%;
+}
+.container-slider2 .slider-anterior2 span {
+  font-size: 1.5em;
+  display: block;
+}
+.container-slider2 .slider-siguiente2 {
+  position: absolute;
+  color: white;
+  top: 40%;
+  right: 0%;
+}
+.container-slider2 .slider-siguiente2 span {
+  font-size: 1.5em;
+  display: block;
+}
+
+
+/* Footer */
+
+.container-fluid {
+  margin-top: 500px;
+}
+
+.text-uppercase {
+  color: turquoise;
+}
+.footer-copyright {
+  color: whitesmoke;
+}
+#rolling {
+  color: turquoise;
+}
+#rolling:hover {
+  color: whitesmoke;
+}
+.redes-container {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.redes-container li {
+  display: inline-block;
+  margin: 0 5px;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.facebook {
+  font-size: 30px;
+  color: whitesmoke;
+}
+.facebook:hover {
+  color: turquoise;
+}
+
+.twitter {
+  font-size: 30px;
+  color: whitesmoke;
+}
+.twitter:hover {
+  color: turquoise;
+}
+
+.linkedin {
+  font-size: 30px;
+  color: whitesmoke;
+}
+.linkedin:hover {
+  color: turquoise;
+}
+
+.instagram {
+  font-size: 30px;
+  color: whitesmoke;
+}
+.instagram:hover {
+  color: turquoise;
+}
