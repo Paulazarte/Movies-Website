@@ -2,6 +2,8 @@
 $(window).scroll(function(){
   $('nav').toggleClass('scrolled',$(this).scrollTop()>200);
 })
+
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -28,7 +30,7 @@ window.onclick = function(event) {
   }
 }
 
-//Formulario
+//Efectos del Formulario
 
 var inputs = document.getElementsByClassName ("formulario__input");
 for (var i =0; i <inputs.length; i++) {
@@ -83,6 +85,8 @@ if(this.value.length>=1) {
 //     e.preventDefault();
 //   })
 
+
+//LOCALSTORAGE E INGRESO DE DATOS HACIA LA TABLA
 
 /*VARIABLES GLOBALES */
 const formularioUI = document.querySelector('#formulario');
@@ -183,7 +187,7 @@ const EliminarDB = (pelis) => {
   GuardarDB();
 }
 
-const ActivarDB = (codigoo) => {
+const ActivarDB = (texto) => {
   // let indexArray = arrayPelis.findIndex((elemento) => {
   //   return elemento.pelis === pelis
   // });
@@ -193,7 +197,7 @@ const ActivarDB = (codigoo) => {
 
   let pelisArray = JSON.parse(localStorage.getItem('peliculas'));
   pelisArray.forEach((elemento) =>{
-    if (elemento.codigo == codigoo && elemento.estado == false) {
+    if (elemento.codigo == texto && elemento.estado == false) {
       elemento.estado = true;
       console.log('coincide: ' + elemento.estado);
       localStorage.setItem('peliculas',JSON.stringify(pelisArray))
@@ -225,7 +229,7 @@ listaPeliculasUI.addEventListener('click',(e) => {
 
   // e.preventDefault();
   
-  if(e.target.innerHTML === 'done_all' || e.target.innerHTML === 'delete' ){
+  if(e.target.innerHTML === 'done_all' || e.target.innerHTML === 'delete' || e.target.innerHTML === 'edit' ){
     let texto = e.target.parentNode.parentNode.childNodes[2].innerText;
     if(e.target.innerHTML === 'delete'){
       //Acción de eliminar
@@ -233,14 +237,15 @@ listaPeliculasUI.addEventListener('click',(e) => {
     }
     if(e.target.innerHTML === 'done_all'){
       //Acción de activar y desactivar
-      let codigoo = e.target.parentNode.parentNode.childNodes[1].firstChild.data;
+      let texto = e.target.parentNode.parentNode.childNodes[1].firstChild.data;
       console.log(e.target.parentNode.parentNode.childNodes[1].firstChild.data)
-      ActivarDB(codigoo)
+      ActivarDB(texto)
     }
-    // if(e.target.innerHTML === 'edit'){
-    //   //Acción de abrir formulario
-    //   EditarDB(texto)
-    // }
+    if(e.target.innerHTML === 'edit'){
+      //Acción de abrir formulario
+      let texto = e.target.parentNode.parentNode.childNodes[2].innerText;
+      EditarDB(texto)
+    }
   }
 });
 
