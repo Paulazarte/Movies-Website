@@ -1,5 +1,3 @@
-//Set 2 o tres peliculas
-
 /*SCROLL NAVBAR*/
 $(window).scroll(function () {
   $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);

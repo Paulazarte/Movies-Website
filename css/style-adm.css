@@ -277,7 +277,7 @@ option{
 }
 
 /*RESPONSIVE NAVBAR*/
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
   #iniciar-sesion .nav-link {
   }
   header nav {
@@ -323,7 +323,7 @@ header nav ul li {
   #iniciar-sesion .nav-link {
     display: inline;
   }
-}
+} */
 /* .container {
   background-color: #ffffff;
 } */
