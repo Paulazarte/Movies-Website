@@ -82,7 +82,7 @@ body {
 /*FLECHAS*/
 .flecha-izquierda,
 .flecha-derecha {
-  /* position: absolute; */
+  position: absolute;
   border: none;
   border-radius: 5%;
   background: rgba(0, 0, 0, 0.5);
