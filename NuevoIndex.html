@@ -38,19 +38,8 @@
     <header>
       <!-- Navbar -->
 
-      <nav
-        class="navbar navbar-expand-sm fixed-top scrolling-navbar"
-      >
-        <a class="navbar-brand" href="#">
-          <img
-            src="img/doggy.png"
-            width="80px"
-            height="70px"
-            class="d-inline-block align-top"
-            alt=""
-            loading="lazy"
-          />
-        </a>
+      <nav class="navbar navbar-expand-sm fixed-top scrolling-navbar" >
+        <a class="navbar-brand" href="#"> <img src="img/doggy.png" width="80px" height="70px" class="d-inline-block align-top" alt="" loading="lazy" /></a>
 
         <button
           class="navbar-toggler"
@@ -102,11 +91,26 @@
               </div>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#"
-                >Películas
-                <span class="sr-only"></span>
-              </a>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdownMenuLink"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Género</a
+              >
+              <div
+              id="menu" 
+              class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+             
+                >
+                <a style="color: turquoise;" class="dropdown-item" href="#"><b>Estrenos</b></a>
+                <a style="color: turquoise;"  class="dropdown-item" href="#"><b>Ranking</b></a>
+                <a style="color: turquoise;"  class="dropdown-item" href="#"><b>Más vistas</b></a>
+              </div>
             </li>
 
             <li class="nav-item">
@@ -131,7 +135,7 @@
        
         <div class="carousel-item">
           <div class="view">
-            <img class="d-block w-100" src="img/1.jpeg"
+            <img class="d-block gradient w-100" src="img/1.jpeg"
               alt="First slide">
               <div class="mask rgba-black-strong" style="height: 21%; margin-top: 33%;" ></div>
           </div>
@@ -144,7 +148,7 @@
         <div class="carousel-item">
           <!--Mask color-->
           <div class="view">
-            <img class="d-block w-100" src="img/2.jpg"
+            <img class="d-block gradient w-100" src="img/2.jpg"
               alt="Second slide">
             <div class="mask rgba-black-strong" style="height: 21%; margin-top: 33%;" ></div>
           </div>
@@ -156,7 +160,7 @@
        
         <div class="carousel-item active">
           <div class="view">
-            <img class="d-block w-100" src="img/3.jpeg"
+            <img class="d-block gradient w-100" src="img/3.jpeg"
               alt="Third slide">
               <div class="mask rgba-black-strong" style="height: 21%; margin-top: 33%;" ></div>
           </div>
@@ -168,7 +172,7 @@
 
         <div class="carousel-item">
           <div class="view">
-            <img class="d-block w-100" src="img/4.jpg"
+            <img class="d-block gradient w-100" src="img/4.jpg"
               alt="Third slide">
               <div class="mask rgba-black-strong" style="height: 21%; margin-top: 33%;" ></div>
           </div>
@@ -180,7 +184,7 @@
 
         <div class="carousel-item">
           <div class="view">
-            <img class="d-block w-100" src="img/5.jpg"
+            <img class="d-block gradient w-100" src="img/5.jpg"
               alt="Third slide">
               <div class="mask rgba-black-strong" style="height: 21%; margin-top: 33%;" ></div>
           </div>
@@ -203,6 +207,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
+      
       <!--/.Controls-->
     </div>
 
@@ -241,10 +246,16 @@
 </div>
 
 <div class="slider-anterior">
-  <span><i class="fas fa-chevron-left"></i></span>
+  <!-- <span><i class="fas fa-chevron-left"></i></span> -->
+  <button role="button" id="flecha-izquierda" class="flecha-izquierda">
+    <i class="fas fa-angle-left"></i>
+  </button>
 </div>
 <div class="slider-siguiente">
-  <span><i class="fas fa-chevron-right"></i></span>
+  <!-- <span><i class="fas fa-chevron-right"></i></span> -->
+  <button role="button" id="flecha-derecha" class="flecha-derecha">
+    <i class="fas fa-angle-right"></i>
+  </button>
 </div>
 
 </div>
@@ -281,12 +292,18 @@
   </div>
   
   <div class="slider-anterior2">
-    <span><i class="fas fa-chevron-left"></i></span>
+    <button role="button" id="flecha-izquierda" class="flecha-izquierda">
+      <i class="fas fa-angle-left"></i>
+    </button>
   </div>
   <div class="slider-siguiente2">
-    <span><i class="fas fa-chevron-right"></i></span>
+    <button role="button" id="flecha-derecha" class="flecha-derecha">
+      <i class="fas fa-angle-right"></i>
+      </button>
   </div>
   
+    
+  </div>
   </div>
   
 

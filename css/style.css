@@ -372,39 +372,3 @@ h2 {
 .boton-reproducir {
 
 }
-
-/* Slider 1 */
-
-#slider1 {
-  display: flex;
-}
-#slider1 .items {
-  width: 100%;
-  
-}
-#slider1 .items img {
-  width: 100%;
- 
-}
-.container-slider {
-  position: relative;
-}
-.container-slider .slider-anterior {
-  position: absolute;
-  color: white;
-  top: 40%;
-}
-.container-slider .slider-anterior span {
-  font-size: 1.5em;
-  display: block;
-}
-.container-slider .slider-siguiente {
-  position: absolute;
-  color: white;
-  top: 40%;
-  right: 0%;
-}
-.container-slider .slider-siguiente span {
-  font-size: 1.5em;
-  display: block;
-}

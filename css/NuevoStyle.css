@@ -8,6 +8,7 @@ body {
   font-size: 1em;
   min-height: 100vh;
   align-items: center;
+  background:  #02124b;
 }
 
 .navbar {
@@ -53,6 +54,60 @@ body {
 .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
+/*BANNER PRINCIPAL*/
+/*DEGRADADO DEL BANNER PRINCIPAL*/
+.carousel-item {
+  /* height: 100vh; */
+  /* min-height: 300px; */
+  background: no-repeat center center scroll;
+  /* -webkit-background-size: cover;
+    background-size:cover ; */
+  /* -webkit-mask-image: radial-gradient(ellipse 200% 70% at 50% 50%, black 0.5%, transparent 66%);
+    mask-image: radial-gradient(ellipse 100% 90% at 70% 50%, black 0.5%, transparent 66%); */
+}
+.gradient {
+  -webkit-mask-image: radial-gradient(ellipse 200% 80% at 50% 50%, black 0.5%, transparent 65%);
+  /* mask-image: radial-gradient(ellipse 100% 90% at 70% 50%, black 0.5%, transparent 66%); */
+}
+.carousel-control-next-icon{
+  width: 50px;
+}
+
+/*PRIMER CAROUSEL*/
+.container-slider,
+.container-slider2{
+  margin: 40px;
+}
+
+/*FLECHAS*/
+.flecha-izquierda,
+.flecha-derecha {
+  /* position: absolute; */
+  border: none;
+  border-radius: 5%;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 40px;
+  height: 70%;
+  top: calc(100% - 25%);
+  line-height: 80px;
+  width: 100px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.2s ease all;
+}
+
+.flecha-izquierda{
+  left: 0;
+}
+
+.flecha-derecha {
+  right: 0;
+}
+
+/*Flechas Banner principal*/
+
 
 /* botones inicio sesion media query */
 @media only screen and (max-width: 767px) {
@@ -117,7 +172,7 @@ body {
 font-size: 2em;
 color: whitesmoke;
 margin-top: 1.5%;
-margin-left: 0.5%;
+margin-left: 30px;
 }
 
 
@@ -133,6 +188,7 @@ margin-left: 0.5%;
 }
 #slider1 .items img {
   width: 100%;
+  padding: 10px;
  
 }
 .container-slider {
@@ -169,6 +225,7 @@ margin-left: 0.5%;
 #slider2 .items img {
   width: 350px;
   height: 250px;
+  padding: 20px;
 }
 .container-slider2 {
   position: relative;
