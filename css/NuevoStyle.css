@@ -78,6 +78,9 @@ body {
 .container-slider2{
   margin: 40px;
 }
+button{
+  border-radius: 5px;
+}
 
 
 /*FLECHAS*/
@@ -111,7 +114,8 @@ body {
 
 /* botones inicio sesion media query */
 @media only screen and (max-width: 767px) {
-  #iniciar-sesion .nav-link {
+  .dropdown-item{
+    text-align: center;
   }
 }
 
