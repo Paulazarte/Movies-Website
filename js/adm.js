@@ -141,9 +141,9 @@ const PintarDB = () => {
           Estado - <b>${element.estado}</b>
         </td>  
         <td style= "background-color:rgba(38, 226, 85, 0.4);">
-          <span class="material-icons mr-3">delete</span> 
-          <span class="material-icons mr-3">edit</span>
-          <span class="material-icons mr-3">done_all</span>
+          <span style= "cursor: pointer;" class="material-icons mr-3">delete</span> 
+          <span style= "cursor: pointer;" class="material-icons mr-3">edit</span>
+          <span style= "cursor: pointer;" class="material-icons mr-3">done_all</span>
         </td>
     </tr>`
       } else {
