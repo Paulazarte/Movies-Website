@@ -19,7 +19,7 @@ body {
  }
 
 .navbar {
-  background: rgb(0, 0, 0, 0.2);
+  background:black;
   width: 100%;
 }
 
@@ -240,13 +240,11 @@ option{
   margin-top: -135px;
 }
 
-#menu {
-  background: rgb(1, 30, 53);
-}
-
 
 /*Footer */
-
+footer{
+  color:#fff;
+}
 .redes-container {
   display: flex;
   align-items: left;
@@ -277,7 +275,7 @@ option{
 }
 
 /*RESPONSIVE NAVBAR*/
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
   #iniciar-sesion .nav-link {
   }
   header nav {
@@ -323,7 +321,7 @@ header nav ul li {
   #iniciar-sesion .nav-link {
     display: inline;
   }
-}
+} */
 /* .container {
   background-color: #ffffff;
 } */
@@ -363,5 +361,12 @@ header nav ul li {
       content: attr(data-th);
       display: block;
       text-align:center;
+  }
+}
+
+/*RESPONSIVE NAVBAR*/
+@media screen and (max-width: 800px) {
+  .dropdown-item{
+    text-align: center;
   }
 }
