@@ -78,9 +78,6 @@ body {
 .container-slider2{
   margin: 40px;
 }
-button{
-  border-radius: 5px;
-}
 
 
 /*FLECHAS*/
@@ -222,8 +219,8 @@ margin-left: 30px;
 
 .items .capa {
   position: absolute;
-  top: 0.5%;
-  left: 0.5%;
+  top: 0%;
+  left: 0%;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
@@ -239,9 +236,30 @@ margin-left: 30px;
 .items:hover .capa {
   transform: scale(1);
 }
+.boton-reproducir{
+  width: 100px;
+  height: 100px;
+  left: 10%;
+ 
+}
+ .boton-reproducir .btn{
+   padding: 1px;
+   font-size: 14px;
+   display: flex;
+   left: 0px;
+ }
 
+ .capa .botones-capa {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: -20px;
+}
+.btnInfo{
+  left: 25% !important;
 
-
+}
 h2 {
   text-align: center;
   margin-top: 30%;
@@ -256,14 +274,19 @@ h2 {
 .capa .botones-capa {
   position: absolute;
   display: flex;
-
 }
 
 .capa .botones-capa .boton-reproducir {
  position: relative;
- left: 4%;
+ left: 20%;
+ top: 40%;
 
 }
+
+/* .btn {
+  padding: 10px;
+  margin-left: -25px ;
+} */
 
 
 /* Slider 2 */
