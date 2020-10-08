@@ -19,7 +19,7 @@ body {
  }
 
 .navbar {
-  background: rgb(0, 0, 0, 0.2);
+  background:black;
   width: 100%;
 }
 
@@ -242,7 +242,9 @@ option{
 
 
 /*Footer */
-
+footer{
+  color:#fff;
+}
 .redes-container {
   display: flex;
   align-items: left;
@@ -359,5 +361,12 @@ header nav ul li {
       content: attr(data-th);
       display: block;
       text-align:center;
+  }
+}
+
+/*RESPONSIVE NAVBAR*/
+@media screen and (max-width: 800px) {
+  .dropdown-item{
+    text-align: center;
   }
 }
