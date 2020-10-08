@@ -1,9 +1,3 @@
-/*SCROLL NAVBAR*/
-$(window).scroll(function () {
-  $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
-})
-
-
 // Get the modal
 var modal = document.getElementById("myModal");
 
