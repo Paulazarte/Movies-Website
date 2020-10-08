@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimum-scale=1.0" />
+
+    <link rel="stylesheet" href="css/NuevoStyle.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+        rel="stylesheet" />
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" />
+    <!--Slick-->
+    <link rel="stylesheet" href="css/slick.css">
+
+    <title>Movies Website</title>
+</head>
+
+<body style="background: black; min-height: 80vh;">
+    <header>
+        <!-- Navbar -->
+
+        <nav class="navbar navbar-expand-sm  scrolling-navbar">
+            <a class="navbar-brand" href="#"> <img src="img/doggy.png" width="80px" height="70px"
+                    class="d-inline-block align-top" alt="" loading="lazy" /></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="basicExampleNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inicio
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Género</a>
+                        <div id="menu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Acción</b></a>
+                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Aventura</b></a>
+                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Comedia</b></a>
+                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Familiar</b></a>
+                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Terror</b></a>
+                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Romance</b></a>
+                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Drama</b></a>
+                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Musical</b></a>
+                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Fantasia</b></a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Películas</a>
+                        <div id="menu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Estrenos</b></a>
+                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Ranking</b></a>
+                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Más vistas</b></a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Series <span class="sr-only"></span></a>
+                    </li>
+                </ul>
+                <div class="text-center" id="iniciar-sesion">
+                    <a class="nav-link" href="">Iniciar sesión</a>
+                    <a class="nav-link" href="">Regístrate</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!--Reproductor de video-->
+
+
+    <div class="d-flex justify-content-center mt-5">
+
+        
+
+
+
+
+
+        <div>
+
+            <iframe width="800" height="400" class="videopeliculas" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+
+    <footer  class="page-footer font-small pt-4 mt-auto">
+        <div class="container-fluid text-center " style="margin-top: 300px;">
+            <div class="row justify-content-center">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <!-- Content -->
+                    <h5 class="text-uppercase fh1">
+                        <b>Seguinos en nuestras redes</b>
+                    </h5>
+                    <div class="redes-container justify-content-center">
+                        <ul>
+                            <li>
+                                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <!--************************TERMINA EL CONTENIDO****************************-->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <!--Slick-->
+    <script src="js/slick.min.js"></script>
+
+    <script src="js/NuevoArchivo.js"></script>
+</body>
+
+</html>
