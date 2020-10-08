@@ -1,3 +1,4 @@
+
 /* Slider */
 .slick-slider
 {
@@ -117,3 +118,30 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+/*TEXTO Y TITULO*/
+h1 {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: black;
+    background: linear-gradient(to right, turquoise, rgba(255, 255, 0, 0.027));
+    mix-blend-mode: screen; //<-- atento a esta linea//
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+ /*RESPONSIVE NAVBAR*/
+ @media screen and (max-width: 800px) {
+    .dropdown-item{
+      text-align: center;
+    }
+  }

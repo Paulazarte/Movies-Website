@@ -25,68 +25,95 @@
 <body style="background: black; min-height: 80vh;">
     <header>
         <!-- Navbar -->
-
-        <nav class="navbar navbar-expand-sm  scrolling-navbar">
-            <a class="navbar-brand" href="#"> <img src="img/doggy.png" width="80px" height="70px"
-                    class="d-inline-block align-top" alt="" loading="lazy" /></a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse text-center" id="basicExampleNav">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-
-                    <!-- Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Género</a>
-                        <div id="menu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Acción</b></a>
-                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Aventura</b></a>
-                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Comedia</b></a>
-                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Familiar</b></a>
-                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Terror</b></a>
-                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Romance</b></a>
-                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Drama</b></a>
-                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Musical</b></a>
-                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Fantasia</b></a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Películas</a>
-                        <div id="menu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Estrenos</b></a>
-                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Ranking</b></a>
-                            <a style="color: turquoise;" class="dropdown-item" href="#"><b>Más vistas</b></a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Series <span class="sr-only"></span></a>
-                    </li>
-                </ul>
-                <div class="text-center" id="iniciar-sesion">
-                    <a class="nav-link" href="">Iniciar sesión</a>
-                    <a class="nav-link" href="">Regístrate</a>
+  
+        <nav class="navbar navbar-expand-sm fixed-top scrolling-navbar" >
+          <a class="navbar-brand" href="#"> <img src="img/logoo.png" width="100px" height="70px" class="d-inline-block align-top" alt="" loading="lazy" /></a>
+  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse text-center" id="basicExampleNav">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active"><a class="nav-link" href="NuevoIndex.html">Inicio<span class="sr-only">(current)</span> </a>
+              </li>
+  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Género</a>
+                <div id="menu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a style="color: turquoise;" class="dropdown-item" href="#"><b>Acción</b></a>
+                  <a style="color: turquoise;"  class="dropdown-item" href="#"><b>Aventura</b></a>
+                  <a style="color: turquoise;"  class="dropdown-item" href="#"><b>Documentales</b></a>
+                  <a style="color: turquoise;"  class="dropdown-item" href="#"><b>Familiar</b></a>
+                  <a style="color: turquoise;"  class="dropdown-item" href="#"><b>Terror</b></a>
+                  <a style="color: turquoise;"  class="dropdown-item" href="#"><b>Romance</b></a>
+                  <a style="color: turquoise;"  class="dropdown-item" href="#"><b>Drama</b></a>
+                  <a style="color: turquoise;"  class="dropdown-item" href="#"><b>Musical</b></a>
+                  <a style="color: turquoise;"  class="dropdown-item" href="#"><b>Fantasia</b></a>
                 </div>
-            </div>
+              </li>
+  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Películas</a>
+                <div id="menu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >
+                  <a style="color: turquoise;" class="dropdown-item" href="#"><b>Estrenos</b></a>
+                  <a style="color: turquoise;"  class="dropdown-item" href="#"><b>Ranking</b></a>
+                  <a style="color: turquoise;"  class="dropdown-item" href="#"><b>Más vistas</b></a>
+                </div>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="#">Series <span class="sr-only"></span></a>
+              </li>
+            </ul>
+            <ul class="navbar-nav nav-flex-icons">
+              <li class="nav-item"><a class="nav-link" href="">Iniciar sesión</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Regístrate</a></li>
+            </ul>
+          </div>
         </nav>
-    </header>
+      </header>
+      <br></br> 
+      <br></br> 
+      <br></br>     
 
 
 
     <!--Reproductor de video-->
 
+    <!--REPRODUCTOR-->
 
+    <!--Intro Section-->
+    <section class="view intro-video">
+        <div class="hm-gradient">
+          <div class="full-bg-img">
+            <div class="container flex-center">
+              <div class="row pt-5 mt-3">
+                <div class="col-lg-6 wow fadeIn mb-5 text-center text-lg-left">
+                  <div class="white-text">
+                    <h1 class="h1-responsive font-weight-bold wow fadeInLeft" data-wow-delay="0.3s">AVENGERS</h1>
+                    <p class="wow fadeInLeft" data-wow-delay="0.3s">Cuando Loki llega a la tierra se roba el 
+                        Teseracto e hipnotiza a Clint Barton, al Dr. Selvig y a algunos agentes de S.H.I.E.L.D. 
+                        Para enfrentar esta amenaza, Nick Fury reúne a Capitán América, Iron Man, Thor, Hulk, 
+                        Black Widow y Hawkeye siendo liberado, generando así al famoso equipo conocido como 
+                        Los Vengadores. </p>
+                    <br>
+                  </div>
+                </div>
+                
+                <div class="col-lg-6 wow fadeIn">
+                  <div class="embed-responsive embed-responsive-16by9 wow fadeInRight">
+                    <iframe width="800" height="400" class="embed-responsive-item" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
     <div class="d-flex justify-content-center mt-5">
 
         
@@ -97,9 +124,7 @@
 
         <div>
 
-            <iframe width="800" height="400" class="videopeliculas" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+            
 
 
 
